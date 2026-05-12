@@ -40,3 +40,54 @@ while (
 }
 
 alert("Dados cadastrados com sucesso!")
+
+//Esse exemplo pede um número até o usuário digitar um valor válido.
+
+function pedirNumero() {
+
+    let numero
+
+    do {
+        numero = Number(prompt("Digite um número maior que 0"))
+    } while (numero <= 0 || isNaN(numero))
+
+    console.log(`Número válido: ${numero}`)
+}
+
+pedirNumero()
+
+//Validar nome
+
+function validarNome() {
+
+    let nome
+
+    do {
+        nome = prompt("Digite seu nome")
+    } while (nome.length <= 3)
+
+    console.log(`Nome válido: ${nome}`)
+}
+
+validarNome()
+
+//Exemplo com menu
+
+function menu() {
+
+    let opcao
+
+    do {
+
+        opcao = prompt(`
+1 - Ver saldo
+2 - Fazer pix
+3 - Sair
+`)
+
+    } while (opcao !== "3")
+
+    console.log("Programa encerrado")
+}
+
+menu()
